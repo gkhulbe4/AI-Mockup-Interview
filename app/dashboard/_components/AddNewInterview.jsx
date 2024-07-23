@@ -36,6 +36,7 @@ function AddNewInterview() {
       .text()
       .replace("```json", "")
       .replace("```", "");
+    console.log(mockJsonResp);
 
     setJsonResponse(mockJsonResp);
     if (mockJsonResp) {
@@ -48,7 +49,7 @@ function AddNewInterview() {
       );
       if (res) {
         setOpenDialog(false);
-        router.push(`/dashboard/interview/${res[0].mockId}`);
+        // router.push(`/dashboard/interview/${res[0].mockId}`);
       }
     } else {
       toast.error("An error occurred");
