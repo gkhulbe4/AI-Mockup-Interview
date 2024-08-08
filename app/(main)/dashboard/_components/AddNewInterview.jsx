@@ -17,7 +17,7 @@ import { addInterview } from "@/utils/actions";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
-function AddNewInterview() {
+function AddNewInterview({ coins }) {
   const [openDialog, setOpenDialog] = useState(false);
   const [jobPosition, setJobPosition] = useState("");
   const [jobDesc, setJobDesc] = useState("");
@@ -45,11 +45,12 @@ function AddNewInterview() {
         jobDesc,
         jobExperience,
         jobPosition,
-        user?.primaryEmailAddress?.emailAddress
+        user.id
       );
+      // console.log(res);
       if (res) {
         setOpenDialog(false);
-        // router.push(`/dashboard/interview/${res[0].mockId}`);
+        router.push(`/dashboard/interview/${res[0].mockId}`);
       }
     } else {
       toast.error("An error occurred");
@@ -62,7 +63,13 @@ function AddNewInterview() {
     <div>
       <div
         className="p-10 border rounded-lg bg-secondary hover:scale-105 hover:shadow-md cursor-pointer transition-all"
-        onClick={() => setOpenDialog(true)}
+        onClick={() => {
+          if (coins > 0) {
+            setOpenDialog(true);
+          } else {
+            toast.error("You dont have enough coins. Please buy them");
+          }
+        }}
       >
         <h2 className="font-medium text-lg text-center">+ Add New</h2>
       </div>

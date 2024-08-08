@@ -1,16 +1,11 @@
-import { drizzle } from "drizzle-orm/postgres-js";
-import { migrate } from "drizzle-orm/postgres-js/migrator";
-import postgres from "postgres";
+import { drizzle } from "drizzle-orm/node-postgres";
+import { Pool } from "pg";
+import * as schema from "./schema";
 
-// for migrations
-const migrationClient = postgres(process.env.NEXT_PUBLIC_DATABASE_URL, {
-  max: 1,
-});
-migrate(drizzle(migrationClient), {
-  migrationsFolder: "./drizzle/migrations",
+export const pool = new Pool({
+  connectionString: process.env.NEXT_PUBLIC_DATABASE_URL,
 });
 
 // for query purposes
-const queryClient = postgres(process.env.NEXT_PUBLIC_DATABASE_URL);
-const db = drizzle(queryClient);
+const db = drizzle(pool, { schema });
 export default db;

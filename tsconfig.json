@@ -22,6 +22,16 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "app/dashboard/interview/[mockId]/start/page.jsx",
+    "app/(main)/howitworks/page.jsx",
+    "app/(main)/dashboard/interview/[mockId]/layout.jsx",
+    "app/api/webhook/route.js",
+    "app/(main)/home/page.jsx"
+  ],
   "exclude": ["node_modules"]
 }
