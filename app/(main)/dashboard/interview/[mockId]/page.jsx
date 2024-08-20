@@ -33,14 +33,12 @@ async function Interview({ params }) {
         <div className="flex flex-col">
           <div className="flex flex-col my-6 gap-5 rounded-lg border p-4">
             <div className="flex gap-2">
-              <h2 className="font-bold text-lg">
-                Job Description / Job Position :{" "}
-              </h2>
+              <h2 className="font-bold text-lg">Job Position : </h2>
               <h2>{result[0]?.jobPosition}</h2>
             </div>
             <div className="flex gap-2">
               <h2 className="font-bold text-lg">
-                Job Description / Job Position :{" "}
+                Job Description / Tech Stack :{" "}
               </h2>
               <h2>{result[0]?.jobDesc}</h2>
             </div>

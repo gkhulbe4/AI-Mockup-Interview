@@ -17,7 +17,7 @@ function Navigation() {
         Dashboard
       </li>
       <li
-        className={`hover:text-blue-600 hover:font-bold transition-all cursor-pointer font-medium${
+        className={`hover:text-blue-600 hover:font-bold transition-all cursor-pointer font-medium ${
           path === "/howitworks" && "text-blue-600 "
         }`}
         onClick={() => router.push("/howitworks")}

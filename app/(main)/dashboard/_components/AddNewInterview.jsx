@@ -30,7 +30,7 @@ function AddNewInterview({ coins }) {
   async function onSubmit(e) {
     e.preventDefault();
     setLoading(true);
-    const inputPrompt = `Job position: ${jobPosition}, Job Description: ${jobDesc}, Years of Experience: ${jobExperience}, Depends on Job Position, Job Description & Years of Experience give us ${process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT} Interview question along with Answer in JSON format, Give us question and answer field on JSON`;
+    const inputPrompt = `Job position: ${jobPosition}, Job Description: ${jobDesc}, Years of Experience: ${jobExperience}, Depends on Job Position, Job Description & Years of Experience give us ${process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT} Interview question along with Answer in JSON format, Give us question and answer field on JSON. Please only provide the json. I dont want anything other than the json.`;
     const result = await chatSession.sendMessage(inputPrompt);
     const mockJsonResp = result.response
       .text()

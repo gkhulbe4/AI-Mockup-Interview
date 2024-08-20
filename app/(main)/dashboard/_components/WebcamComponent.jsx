@@ -24,7 +24,7 @@ function WebcamComponent() {
       </button> */}
       {cam ? (
         <Webcam
-          onUserMedia={cam}
+          // onUserMedia={cam}
           // onUserMediaError={() => setCam(false)}
           mirrored={true}
           style={{ height: 300, width: 600 }}

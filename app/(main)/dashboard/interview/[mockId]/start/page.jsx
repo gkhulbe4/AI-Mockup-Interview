@@ -14,8 +14,9 @@ function StartInterview({ params }) {
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const { setCam } = useCam((state) => ({
+  const { setCam, cam } = useCam((state) => ({
     setCam: state.setCam,
+    cam: state.cam,
   }));
 
   useEffect(() => {
@@ -23,6 +24,9 @@ function StartInterview({ params }) {
       if (!params.mockId) {
         router.push("/dashboard");
       } else {
+        if (cam === false) {
+          router.push(`/dashboard/interview/${params.mockId}`);
+        }
         try {
           setIsLoading(true);
           const res = await getInterviewData(params.mockId);
@@ -34,7 +38,7 @@ function StartInterview({ params }) {
           }
           setInterviewData(res);
           const json = res.jsonMockResp.replace(/```/g, "");
-          // console.log(json);
+          console.log(json);
           setMockInterviewQuestion(JSON.parse(json));
           setIsLoading(false);
         } catch (error) {

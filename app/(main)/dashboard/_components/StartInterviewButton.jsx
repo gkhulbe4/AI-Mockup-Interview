@@ -30,7 +30,7 @@ function StartInterviewButton() {
                 Start Interview
               </Button>
             </TooltipTrigger>
-            <TooltipContent>Please Enable Webcam</TooltipContent>
+            <TooltipContent>Please enable the webcam to proceed</TooltipContent>
           </Tooltip>
         </TooltipProvider>
       )}

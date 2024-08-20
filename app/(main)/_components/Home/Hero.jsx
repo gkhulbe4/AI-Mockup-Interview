@@ -8,10 +8,10 @@ const cardContent = [
       "Create tailored interviews using advanced AI algorithms. Each interview is unique, designed to challenge and evaluate your skills effectively.",
     icon: (
       <svg
-        className="size-10 text-pink-500"
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        color="#ec4899"
+        width="44"
+        height="44"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -35,10 +35,10 @@ const cardContent = [
       "Respond to interview questions through voice recordings. Our system analyzes your speech to provide detailed feedback on clarity, tone, and content.",
     icon: (
       <svg
-        className="size-10 text-pink-500"
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        color="#ec4899"
+        width="44"
+        height="44"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -62,10 +62,10 @@ const cardContent = [
       "Receive detailed, personalized feedback on your performance. Understand your strengths and areas for improvement with our in-depth analysis.",
     icon: (
       <svg
-        className="size-10 text-pink-500"
+        color="#ec4899"
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="44"
+        height="44"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -87,10 +87,10 @@ const cardContent = [
       "Your interviews and feedback are kept confidential. Each user’s data is securely stored, ensuring that only you can access your interview history.",
     icon: (
       <svg
-        className="size-10 text-pink-500"
+        color="#ec4899"
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="44"
+        height="44"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -110,10 +110,10 @@ const cardContent = [
       "Purchase credits to create more interviews. Use your credits to unlock new features and take your interview practice to the next level.",
     icon: (
       <svg
-        className="size-10 text-pink-500"
+        color="#ec4899"
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="44"
+        height="44"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -135,10 +135,10 @@ const cardContent = [
       "Track your progress over time with a personalized interview history. Analyze past performances to see how much you’ve improved.",
     icon: (
       <svg
-        className="size-10 text-pink-500"
+        color="#ec4899"
         xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
+        width="44"
+        height="44"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"

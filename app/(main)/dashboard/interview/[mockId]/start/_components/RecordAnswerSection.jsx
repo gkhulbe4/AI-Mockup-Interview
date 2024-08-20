@@ -94,11 +94,11 @@ function RecordAnswerSection({ activeQuestionIndex, mockInterviewQuestion }) {
         />
         {cam && (
           <Webcam
-            onUserMedia={cam}
             mirrored={true}
             style={{ height: 300, width: "100%", zIndex: 10 }}
           />
         )}
+        {cam || <div>No Cam</div>}
       </div>
       <Button
         disabled={loading}
@@ -115,7 +115,7 @@ function RecordAnswerSection({ activeQuestionIndex, mockInterviewQuestion }) {
           </h2>
         )}
       </Button>
-      <Button onClick={() => console.log(userAnswer)}>Show User answer</Button>
+      {/* <Button onClick={() => console.log(userAnswer)}>Show User answer</Button> */}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 "use server";
-import { MockInterview, UserAnswer } from "../schema";
+import { MockInterview, UserAnswer, UserCoins } from "../schema";
 import db from "@/utils/db";
 import { v4 as uuidv4 } from "uuid";
-import { and, desc, eq } from "drizzle-orm";
+import { and, desc, eq, sql } from "drizzle-orm";
 
 export async function addInterview(
   jsonResponse,
@@ -22,6 +22,15 @@ export async function addInterview(
       createdBy: userId,
     })
     .returning({ mockId: MockInterview.mockId });
+
+  const updateCoins = await db
+    .update(UserCoins)
+    .set({
+      numberOfCoins: sql`${UserCoins.numberOfCoins} - 1`,
+      updatedAt: new Date(),
+    })
+    .where(eq(UserCoins.userId, userId));
+
   return res;
 }
 
